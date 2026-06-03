@@ -10,12 +10,7 @@
   <meta name="theme-color" content="#06B6D4"/>
   <title>Leo Campeón</title>
   <link rel="manifest" href="manifest.json"/>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%;background:#F0F4FF}
-    body{overflow:hidden;position:fixed;width:100%}
-    #root{overflow-y:auto;-webkit-overflow-scrolling:touch;height:100dvh}
-  </style>
+  <style>*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;background:#F0F4FF}body{overflow:hidden;position:fixed;width:100%}#root{overflow-y:auto;-webkit-overflow-scrolling:touch;height:100dvh}</style>
   <script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
 </head>
@@ -23,9 +18,8 @@
 <div id="root"></div>
 <script>
 if('serviceWorker'in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
-var useState=React.useState,useEffect=React.useEffect,useRef=React.useRef,
-    useCallback=React.useCallback,useReducer=React.useReducer,
-    useMemo=React.useMemo,useContext=React.useContext;
+var useState=React.useState,useEffect=React.useEffect,useRef=React.useRef,useCallback=React.useCallback,useReducer=React.useReducer,useMemo=React.useMemo,useContext=React.useContext;
+var SB_URL='https://ydtbmbivkvhbmluhkobx.supabase.co';var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlkdGJtYml2a3ZoYm1sdWhrb2J4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NDQxNzksImV4cCI6MjA5NTIyMDE3OX0.6U0v3tGHwAKueqxr_OCs3o8fu_GPuewgbHaGubhotDs';window.__pc=null;function sbSet(c,d){fetch(SB_URL+'/rest/v1/progreso',{method:'POST',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates'},body:JSON.stringify({codigo:c,datos:d,actualizado_at:new Date().toISOString()})}).catch(function(){});}function sbGet(c,cb){fetch(SB_URL+'/rest/v1/progreso?codigo=eq.'+encodeURIComponent(c)+'&select=datos',{headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY}}).then(function(r){return r.json();}).then(function(d){cb(d&&d[0]?d[0].datos:null);}).catch(function(){cb(null);});}
 </script>
 <script>
 // ═══════════════════════════════════════════════════════════════════
@@ -135,6 +129,154 @@ const FONT_SCRIPT = "'Playwrite ES',cursive";
 // CURRICULUM — all levels with corrected data
 // ═══════════════════════════════════════════════════════════════════
 const LEVELS = [{
+  id: 0,
+  title: "Las letras y sus sonidos",
+  subtitle: "Toca cada letra para escuchar su sonido",
+  icon: "🔤",
+  color: "#F59E0B",
+  type: "letters",
+  letters: [{
+    letter: "A",
+    display: "A",
+    tts: "aaaaaaa",
+    hint: "vocal"
+  }, {
+    letter: "E",
+    display: "E",
+    tts: "eeeeeee",
+    hint: "vocal"
+  }, {
+    letter: "I",
+    display: "I",
+    tts: "iiiiiii",
+    hint: "vocal"
+  }, {
+    letter: "O",
+    display: "O",
+    tts: "ooooooo",
+    hint: "vocal"
+  }, {
+    letter: "U",
+    display: "U",
+    tts: "uuuuuuu",
+    hint: "vocal"
+  }, {
+    letter: "M",
+    display: "M",
+    tts: "mmmmm",
+    hint: "consonante"
+  }, {
+    letter: "P",
+    display: "P",
+    tts: "pa",
+    hint: "consonante"
+  }, {
+    letter: "L",
+    display: "L",
+    tts: "lll",
+    hint: "consonante"
+  }, {
+    letter: "S",
+    display: "S",
+    tts: "sssss",
+    hint: "consonante"
+  }, {
+    letter: "T",
+    display: "T",
+    tts: "ta",
+    hint: "consonante"
+  }, {
+    letter: "D",
+    display: "D",
+    tts: "da",
+    hint: "consonante"
+  }, {
+    letter: "N",
+    display: "N",
+    tts: "nnnnn",
+    hint: "consonante"
+  }, {
+    letter: "B",
+    display: "B",
+    tts: "ba",
+    hint: "consonante"
+  }, {
+    letter: "V",
+    display: "V",
+    tts: "va",
+    hint: "igual sonido que B"
+  }, {
+    letter: "R",
+    display: "R",
+    tts: "rrrrrr",
+    hint: "consonante"
+  }, {
+    letter: "F",
+    display: "F",
+    tts: "fffff",
+    hint: "consonante"
+  }, {
+    letter: "C",
+    display: "C",
+    tts: "ka",
+    hint: "suena K con a,o,u"
+  }, {
+    letter: "Z",
+    display: "Z",
+    tts: "zeta",
+    hint: "suena Z con e,i"
+  }, {
+    letter: "K",
+    display: "K",
+    tts: "ka",
+    hint: "consonante"
+  }, {
+    letter: "G",
+    display: "G",
+    tts: "ga",
+    hint: "suena suave con a,o,u"
+  }, {
+    letter: "J",
+    display: "J",
+    tts: "jjjjj",
+    hint: "consonante"
+  }, {
+    letter: "Ñ",
+    display: "Ñ",
+    tts: "ñ",
+    hint: "consonante"
+  }, {
+    letter: "CH",
+    display: "CH",
+    tts: "ch",
+    hint: "dígrafo"
+  }, {
+    letter: "LL",
+    display: "LL",
+    tts: "ya",
+    hint: "igual sonido que Y"
+  }, {
+    letter: "Y",
+    display: "Y",
+    tts: "ya",
+    hint: "igual sonido que LL"
+  }, {
+    letter: "H",
+    display: "H",
+    tts: "(silencio)",
+    hint: "letra muda"
+  }, {
+    letter: "X",
+    display: "X",
+    tts: "ks",
+    hint: "consonante"
+  }, {
+    letter: "Q",
+    display: "Q",
+    tts: "ka",
+    hint: "siempre con U"
+  }]
+}, {
   id: 1,
   title: "Mis primeras sílabas",
   subtitle: "M · P · L · S · T · D · N",
@@ -262,6 +404,70 @@ const LEVELS = [{
     opts: ["🪢 nudo", "🍕 pizza", "🎪 circo"],
     c: 0
   }, {
+    w: "TOMA",
+    s1: "TO",
+    s2: "MA",
+    tts: "toma",
+    emoji: "🥤",
+    opts: ["🥤 toma", "🌙 luna", "🍎 manzana"],
+    c: 0
+  }, {
+    w: "MULO",
+    s1: "MU",
+    s2: "LO",
+    tts: "mulo",
+    emoji: "🫏",
+    opts: ["🫏 mulo", "🌸 flor", "🎵 música"],
+    c: 0
+  }, {
+    w: "TIPO",
+    s1: "TI",
+    s2: "PO",
+    tts: "tipo",
+    emoji: "🧑",
+    opts: ["🌊 mar", "🧑 tipo", "🐦 pájaro"],
+    c: 1
+  }, {
+    w: "LOMA",
+    s1: "LO",
+    s2: "MA",
+    tts: "loma",
+    emoji: "⛰️",
+    opts: ["🎸 guitarra", "⛰️ loma", "🍌 plátano"],
+    c: 1
+  }, {
+    w: "MIEL",
+    s1: "MI",
+    s2: "EL",
+    tts: "miel",
+    emoji: "🍯",
+    opts: ["🍯 miel", "🦋 mariposa", "🐴 caballo"],
+    c: 0
+  }, {
+    w: "SUMA",
+    s1: "SU",
+    s2: "MA",
+    tts: "suma",
+    emoji: "➕",
+    opts: ["🍦 helado", "➕ suma", "🐙 pulpo"],
+    c: 1
+  }, {
+    w: "LISO",
+    s1: "LI",
+    s2: "SO",
+    tts: "liso",
+    emoji: "🪞",
+    opts: ["🦁 león", "🎀 lazo", "🪞 liso"],
+    c: 2
+  }, {
+    w: "MOTE",
+    s1: "MO",
+    s2: "TE",
+    tts: "mote",
+    emoji: "🏷️",
+    opts: ["🏷️ mote", "🌙 luna", "🍎 manzana"],
+    c: 0
+  }, {
     w: "PUMA",
     s1: "PU",
     s2: "MA",
@@ -295,15 +501,6 @@ const LEVELS = [{
     emoji: "⚽",
     opts: ["🌸 flor", "⚽ pelota", "🎵 música"],
     c: 1
-  }, {
-    w: "CAMINO",
-    s1: "CA",
-    s2: "MI",
-    s3: "NO",
-    tts: "camino",
-    emoji: "🛤️",
-    opts: ["🌊 mar", "🐦 pájaro", "🛤️ camino"],
-    c: 2
   }, {
     w: "PALOMA",
     s1: "PA",
@@ -350,32 +547,41 @@ const LEVELS = [{
     opts: ["🦁 león", "🎀 lazo", "🥔 patata"],
     c: 2
   }, {
-    w: "MEDALLA",
-    s1: "ME",
-    s2: "DA",
-    s3: "LLA",
-    tts: "medalla",
-    emoji: "🥇",
-    opts: ["🌸 flor", "🥇 medalla", "🎵 nota"],
+    w: "MONEDA",
+    s1: "MO",
+    s2: "NE",
+    s3: "DA",
+    tts: "moneda",
+    emoji: "🪙",
+    opts: ["🪙 moneda", "🌙 luna", "🐦 pájaro"],
+    c: 0
+  }, {
+    w: "PINTURA",
+    s1: "PIN",
+    s2: "TU",
+    s3: "RA",
+    tts: "pintura",
+    emoji: "🎨",
+    opts: ["🎨 pintura", "🍕 pizza", "🎪 circo"],
+    c: 0
+  }, {
+    w: "LUNETA",
+    s1: "LU",
+    s2: "NE",
+    s3: "TA",
+    tts: "luneta",
+    emoji: "🌙",
+    opts: ["🌸 flor", "🌙 luneta", "🎵 música"],
     c: 1
   }, {
-    w: "FAMILIA",
-    s1: "FA",
-    s2: "MI",
-    s3: "LIA",
-    tts: "familia",
-    emoji: "👨‍👩‍👧",
-    opts: ["🌊 mar", "🐦 pájaro", "👨‍👩‍👧 familia"],
+    w: "MINUTO",
+    s1: "MI",
+    s2: "NU",
+    s3: "TO",
+    tts: "minuto",
+    emoji: "⏱️",
+    opts: ["🌊 mar", "🐦 pájaro", "⏱️ minuto"],
     c: 2
-  }, {
-    w: "PANTERA",
-    s1: "PAN",
-    s2: "TE",
-    s3: "RA",
-    tts: "pantera",
-    emoji: "🐆",
-    opts: ["🐆 pantera", "🍕 pizza", "🎪 circo"],
-    c: 0
   }]
 }, {
   id: 4,
@@ -480,6 +686,70 @@ const LEVELS = [{
     emoji: "🕯️",
     opts: ["🌊 mar", "🕯️ vela", "🐦 pájaro"],
     c: 1
+  }, {
+    w: "REMO",
+    s1: "RE",
+    s2: "MO",
+    tts: "remo",
+    emoji: "🚣",
+    opts: ["🚣 remo", "🌙 luna", "🍎 manzana"],
+    c: 0
+  }, {
+    w: "BOLA",
+    s1: "BO",
+    s2: "LA",
+    tts: "bola",
+    emoji: "🔵",
+    opts: ["🌸 flor", "🔵 bola", "🎵 música"],
+    c: 1
+  }, {
+    w: "RISA",
+    s1: "RI",
+    s2: "SA",
+    tts: "risa",
+    emoji: "😄",
+    opts: ["😄 risa", "🍕 pizza", "🎪 circo"],
+    c: 0
+  }, {
+    w: "JEFE",
+    s1: "JE",
+    s2: "FE",
+    tts: "jefe",
+    emoji: "👔",
+    opts: ["🎸 guitarra", "👔 jefe", "🍌 plátano"],
+    c: 1
+  }, {
+    w: "GEMA",
+    s1: "GE",
+    s2: "MA",
+    tts: "gema",
+    emoji: "💎",
+    opts: ["🌺 rosa", "🐬 delfín", "💎 gema"],
+    c: 2
+  }, {
+    w: "RUTA",
+    s1: "RU",
+    s2: "TA",
+    tts: "ruta",
+    emoji: "🗺️",
+    opts: ["🍦 helado", "🗺️ ruta", "🐙 pulpo"],
+    c: 1
+  }, {
+    w: "CERO",
+    s1: "CE",
+    s2: "RO",
+    tts: "cero",
+    emoji: "0️⃣",
+    opts: ["0️⃣ cero", "🌙 luna", "🐟 pez"],
+    c: 0
+  }, {
+    w: "BICI",
+    s1: "BI",
+    s2: "CI",
+    tts: "bici",
+    emoji: "🚲",
+    opts: ["🦁 león", "🎀 lazo", "🚲 bici"],
+    c: 2
   }, {
     w: "CABO",
     s1: "CA",
@@ -633,6 +903,54 @@ const LEVELS = [{
     opts: ["🪓 hacha", "🦋 mariposa", "🐴 caballo"],
     c: 0
   }, {
+    w: "YESO",
+    s1: "YE",
+    s2: "SO",
+    tts: "yeso",
+    emoji: "🪨",
+    opts: ["🪨 yeso", "🌙 luna", "🍎 manzana"],
+    c: 0
+  }, {
+    w: "ZONA",
+    s1: "ZO",
+    s2: "NA",
+    tts: "zona",
+    emoji: "📍",
+    opts: ["🌸 flor", "📍 zona", "🎵 música"],
+    c: 1
+  }, {
+    w: "CHICO",
+    s1: "CHI",
+    s2: "CO",
+    tts: "chico",
+    emoji: "👦",
+    opts: ["🌊 mar", "🐦 pájaro", "👦 chico"],
+    c: 2
+  }, {
+    w: "LUCHA",
+    s1: "LU",
+    s2: "CHA",
+    tts: "lucha",
+    emoji: "🤼",
+    opts: ["🤼 lucha", "🍕 pizza", "🎪 circo"],
+    c: 0
+  }, {
+    w: "FECHA",
+    s1: "FE",
+    s2: "CHA",
+    tts: "fecha",
+    emoji: "📅",
+    opts: ["🎸 guitarra", "📅 fecha", "🍌 plátano"],
+    c: 1
+  }, {
+    w: "LECHO",
+    s1: "LE",
+    s2: "CHO",
+    tts: "lecho",
+    emoji: "🛏️",
+    opts: ["🌺 rosa", "🐬 delfín", "🛏️ lecho"],
+    c: 2
+  }, {
     w: "COCHE",
     s1: "CO",
     s2: "CHE",
@@ -768,6 +1086,38 @@ const LEVELS = [{
     emoji: "🏺",
     opts: ["🎸 guitarra", "🏺 urna", "🍌 plátano"],
     c: 1
+  }, {
+    w: "ALTO",
+    s1: "AL",
+    s2: "TO",
+    tts: "alto",
+    emoji: "📏",
+    opts: ["📏 alto", "🌙 luna", "🍎 manzana"],
+    c: 0
+  }, {
+    w: "APTO",
+    s1: "AP",
+    s2: "TO",
+    tts: "apto",
+    emoji: "✅",
+    opts: ["✅ apto", "🍕 pizza", "🎪 circo"],
+    c: 0
+  }, {
+    w: "ARMA",
+    s1: "AR",
+    s2: "MA",
+    tts: "arma",
+    emoji: "⚔️",
+    opts: ["🎸 guitarra", "⚔️ arma", "🍌 plátano"],
+    c: 1
+  }, {
+    w: "ORCO",
+    s1: "OR",
+    s2: "CO",
+    tts: "orco",
+    emoji: "👹",
+    opts: ["🌊 mar", "🐦 pájaro", "👹 orco"],
+    c: 2
   }, {
     w: "ELFO",
     s1: "EL",
@@ -1026,10 +1376,10 @@ const MSG_FAIL = ["¡Inténtalo otra vez, campeón! 💪", "¡Casi! Vamos de nue
 const ADMIN_PIN = "280608";
 
 // ─── Persistence ─────────────────────────────────────────────────
-const STORE_KEY = "leo_v6";
+const STORE_KEY = "leo_v7";
 function computeUnlocked(completed) {
-  // Level 1 always unlocked. Each completed level unlocks the next one.
-  const u = new Set([1]);
+  // Level 0 always unlocked. Each completed level unlocks the next one.
+  const u = new Set([0]);
   completed.forEach(id => u.add(id + 1));
   return Array.from(u);
 }
@@ -1043,13 +1393,13 @@ function initStore() {
         ...s,
         unlocked
       };
-      localStorage.setItem(STORE_KEY, JSON.stringify(clean));
+      localStorage.setItem(STORE_KEY, JSON.stringify(clean)); try{if(window.__pc)sbSet(window.__pc,clean);}catch(_){}
       return clean;
     }
   } catch {}
   return {
     stars: 0,
-    unlocked: [1],
+    unlocked: [0],
     completed: [],
     starsPerLevel: {},
     caseMode: "upper"
@@ -1062,7 +1412,7 @@ function useStore() {
   const update = fn => setStore(prev => {
     const n = fn(prev);
     try {
-      localStorage.setItem(STORE_KEY, JSON.stringify(n));
+      localStorage.setItem(STORE_KEY, JSON.stringify(n)); try{if(window.__pc)sbSet(window.__pc,n);}catch(_){}
     } catch {}
     return n;
   });
@@ -1096,7 +1446,7 @@ function useStore() {
   const reset = () => {
     const f = initStore();
     try {
-      localStorage.setItem(STORE_KEY, JSON.stringify(f));
+      localStorage.setItem(STORE_KEY, JSON.stringify(f)); try{if(window.__pc)sbSet(window.__pc,f);}catch(_){}
     } catch {}
     setStore(f);
     setSessionUnlocked([]);
@@ -1832,6 +2182,8 @@ function LessonRouter({
     showSylNums
   };
   switch (level.type) {
+    case "letters":
+      return /*#__PURE__*/React.createElement(LettersLesson, p);
     case "syllables":
       return /*#__PURE__*/React.createElement(SyllablesLesson, p);
     case "words":
@@ -1847,6 +2199,204 @@ function LessonRouter({
     default:
       return null;
   }
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// LETTERS LESSON — tap a letter to hear its phonetic sound
+// ═══════════════════════════════════════════════════════════════════
+function LettersLesson({
+  level,
+  caseMode,
+  onComplete,
+  onBack
+}) {
+  const [done, setDone] = useState(new Set());
+  const [conf, setConf] = useState(false);
+  const {
+    speak,
+    cheer
+  } = useTTS();
+  const letters = level.letters;
+  const allDone = done.size >= letters.length;
+  function tap(l) {
+    const newDone = new Set(done).add(l.letter);
+    setDone(newDone);
+    if (newDone.size >= letters.length) {
+      setConf(true);
+      setTimeout(() => setConf(false), 1500);
+    }
+  }
+  const vowels = letters.filter(l => l.hint === "vocal");
+  const consonants = letters.filter(l => l.hint !== "vocal");
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: 16
+    }
+  }, /*#__PURE__*/React.createElement(Confetti, {
+    active: conf
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: 14
+    }
+  }, /*#__PURE__*/React.createElement(BackBtn, {
+    onClick: onBack
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontWeight: 700,
+      fontSize: 13,
+      color: T.muted
+    }
+  }, done.size, "/", letters.length, " letras")), /*#__PURE__*/React.createElement(ProgressBar, {
+    value: done.size,
+    max: letters.length,
+    color: level.color,
+    h: 12
+  }), /*#__PURE__*/React.createElement(Card, {
+    style: {
+      textAlign: "center",
+      margin: "14px 0 10px",
+      padding: "16px 14px"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontWeight: 900,
+      color: level.color,
+      fontSize: 14,
+      marginBottom: 4
+    }
+  }, "\uD83D\uDD24 Toca cada letra para escuchar su sonido"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: 12,
+      color: T.muted
+    }
+  }, "\xA1Di el sonido en voz alta al pulsarla!")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontWeight: 900,
+      color: "#F59E0B",
+      fontSize: 13,
+      marginBottom: 8,
+      marginLeft: 4
+    }
+  }, "Vocales"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 10,
+      flexWrap: "wrap",
+      justifyContent: "center",
+      marginBottom: 16
+    }
+  }, vowels.map(l => {
+    const tapped = done.has(l.letter);
+    return /*#__PURE__*/React.createElement("button", {
+      key: l.letter,
+      onClick: () => tap(l),
+      style: {
+        width: 64,
+        height: 72,
+        borderRadius: 18,
+        border: "none",
+        cursor: "pointer",
+        background: tapped ? "linear-gradient(135deg,#F59E0B,#FBBF24)" : "white",
+        boxShadow: tapped ? `0 5px 18px #F59E0B44` : `0 3px 10px rgba(0,0,0,0.1)`,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 2,
+        transition: "all 0.25s",
+        transform: tapped ? "scale(1.08)" : "scale(1)"
+      }
+    }, /*#__PURE__*/React.createElement(DisplayText, {
+      text: l.display,
+      mode: caseMode,
+      style: {
+        fontSize: 28,
+        color: tapped ? "white" : "#1E293B"
+      }
+    }), tapped && /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: 10,
+        color: "white",
+        fontWeight: 700
+      }
+    }, "\u2713"));
+  })), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontWeight: 900,
+      color: "#06B6D4",
+      fontSize: 13,
+      marginBottom: 8,
+      marginLeft: 4
+    }
+  }, "Consonantes"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 8,
+      flexWrap: "wrap",
+      justifyContent: "center",
+      marginBottom: 20
+    }
+  }, consonants.map(l => {
+    const tapped = done.has(l.letter);
+    return /*#__PURE__*/React.createElement("button", {
+      key: l.letter,
+      onClick: () => tap(l),
+      style: {
+        minWidth: 58,
+        height: 68,
+        borderRadius: 16,
+        border: "none",
+        cursor: "pointer",
+        padding: "0 8px",
+        background: tapped ? `linear-gradient(135deg,${level.color},${level.color}bb)` : "white",
+        boxShadow: tapped ? `0 5px 18px ${level.color}44` : `0 3px 10px rgba(0,0,0,0.08)`,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 2,
+        transition: "all 0.25s",
+        transform: tapped ? "scale(1.06)" : "scale(1)"
+      }
+    }, /*#__PURE__*/React.createElement(DisplayText, {
+      text: l.display,
+      mode: caseMode,
+      style: {
+        fontSize: l.display.length > 2 ? 16 : 24,
+        color: tapped ? "white" : "#1E293B",
+        fontWeight: 900
+      }
+    }), l.hint !== "consonante" && /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: 9,
+        color: tapped ? "rgba(255,255,255,0.85)" : T.muted,
+        fontWeight: 700
+      }
+    }, l.hint), tapped && /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: 10,
+        color: tapped ? "white" : level.color,
+        fontWeight: 700
+      }
+    }, "\u2713"));
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center"
+    }
+  }, allDone ? /*#__PURE__*/React.createElement(Btn, {
+    color: "#22C55E",
+    size: "lg",
+    onClick: () => onComplete(3)
+  }, "\uD83C\uDFC6 \xA1He terminado!") : /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: T.muted,
+      fontSize: 13,
+      fontWeight: 700
+    }
+  }, "Pulsa todas las letras para terminar \uD83D\uDC46")));
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -2172,18 +2722,46 @@ function WordsLesson({
   })), /*#__PURE__*/React.createElement(SlowBar, {
     active: loading,
     onDone: loadDone
-  }), phase === "syl1" && /*#__PURE__*/React.createElement("p", {
+  }), phase === "syl1" && /*#__PURE__*/React.createElement("div", {
     style: {
-      color: T.muted,
-      fontSize: 13,
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: 8,
       marginTop: 6
     }
-  }, "Lee la s\xEDlaba y pulsa \"\xA1Ya la s\xE9!\" \uD83D\uDC40"), phase === "syl2" && /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement(SpeakBtn, {
+    color: level.color,
+    onPress: () => speak(item.s1.toLowerCase(), {
+      rate: 0.65,
+      jitter: false
+    }),
+    label: "\uD83D\uDD0A Escuchar s\xEDlaba"
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: T.muted,
+      fontSize: 13
+    }
+  }, "Lee la s\xEDlaba y pulsa \"\xA1Ya la s\xE9!\" \uD83D\uDC40")), phase === "syl2" && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: 8,
+      marginTop: 6
+    }
+  }, /*#__PURE__*/React.createElement(SpeakBtn, {
+    color: "#F97316",
+    onPress: () => speak(item.s2.toLowerCase(), {
+      rate: 0.65,
+      jitter: false
+    }),
+    label: "\uD83D\uDD0A Escuchar 2\xAA s\xEDlaba"
+  }), /*#__PURE__*/React.createElement("p", {
     style: {
       color: level.color,
       fontSize: 14,
-      fontWeight: 900,
-      marginTop: 6
+      fontWeight: 900
     }
   }, "\xA1Lee las dos juntas! \u2192 ", /*#__PURE__*/React.createElement(DisplayText, {
     text: item.w,
@@ -2191,7 +2769,7 @@ function WordsLesson({
     style: {
       fontSize: 18
     }
-  })), phase === "answer" && /*#__PURE__*/React.createElement("p", {
+  }))), phase === "answer" && /*#__PURE__*/React.createElement("p", {
     style: {
       color: "#166534",
       fontSize: 14,
